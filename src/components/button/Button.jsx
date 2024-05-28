@@ -1,4 +1,4 @@
-export default function Button({text, fn}){
-    return (<button onClick={fn}>{text}
+export default function Button({ text, fn, children }) {
+    return (<button onClick={fn}>{children}
     </button>)
 }

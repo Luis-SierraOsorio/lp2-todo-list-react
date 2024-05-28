@@ -4,9 +4,10 @@ import { useState } from "react"
 
 function App() {
   const [items, setItems] = useState([
-    { id: 0, message: "First Todo", completed: false },
-    { id: 2, message: "Second Todo", completed: true },
-    { id: 12, message: "Second Todo", completed: true }])
+    // { id: 0, message: "First Todo", completed: false },
+    // { id: 2, message: "Second Todo", completed: true },
+    // { id: 12, message: "Second Todo", completed: true }
+  ])
   return (
     <>
       <Input setItems={setItems}></Input>
