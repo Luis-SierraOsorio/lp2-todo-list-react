@@ -1,4 +1,29 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
 .message {
     font-size: 2rem;
     margin: 1rem;
+}
+
+.button-container {
+    display: flex;
+    /* background-color: red; */
+    min-width: 8rem;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.input:focus {
+    outline: none;
 }

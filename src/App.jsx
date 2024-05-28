@@ -1,5 +1,6 @@
 import Input from "./components/input/Input"
 import ListContainer from "./components/list-container/ListContainer"
+import styles from "./App.module.css"
 import { useState } from "react"
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     { id: 12, message: "Second Todo", completed: true }
   ])
   return (
-    <main>
+    <main className={styles.container}>
       {/* component with input and add button */}
       <Input setItems={setItems}></Input>
       {/* component container for all list items */}

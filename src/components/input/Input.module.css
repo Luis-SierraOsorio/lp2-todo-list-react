@@ -1,19 +1,23 @@
 .container {
     padding: 1.5rem;
-    background-color: rgb(200, 193, 193);
+    /* background-color: rgb(200, 193, 193); */
+    background-color: transparent;
+    border: .25rem solid rgba(146, 75, 179, 0.596);
     text-align: center;
     border-radius: 1rem;
     position: relative;
     /* box-sizing: border-box; */
+    margin-bottom: 2rem;
 
 }
 
 .inputTextBox {
-    padding-right: 15rem;
+    padding-right: 7.5rem;
     width: 100%;
     background-color: transparent;
     border: none;
     box-sizing: border-box;
+
 }
 
 .inputTextBox:focus {
@@ -26,8 +30,8 @@
     top: 0;
     right: 0;
     height: 100%;
-    width: 15%;
-    background-color: transparent;
+    width: 20%;
+    background-color: rgba(61, 186, 61, 0.756);
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 
@@ -35,4 +39,10 @@
 
 .add-button:hover {
     cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+    .inputTextBox {
+        padding-right: 12rem;
+    }
 }

@@ -1,0 +1,14 @@
+.container {
+    max-width: 70%;
+    margin: 10rem auto;
+    border-radius: 1rem;
+    box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, .35);
+    min-height: 35vh;
+    background-color: rgba(46, 3, 57, 0.566);
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        max-width: 40%;
+    }
+}
