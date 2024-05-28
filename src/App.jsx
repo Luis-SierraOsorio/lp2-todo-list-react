@@ -9,7 +9,7 @@ function App() {
     { id: 12, message: "Second Todo", completed: true }])
   return (
     <>
-      <Input items={items} setItems={setItems}></Input>
+      <Input setItems={setItems}></Input>
       <ListContainer items={items} setItems={setItems}></ListContainer>
     </>
   )

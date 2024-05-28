@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import styles from './Input.module.css'
 
-export default function Input({ items, setItems }) {
+export default function Input({ setItems }) {
     const [input, setInput] = useState("")
 
     function handleAdd() {
         if (input !== "") {
-            setItems([
+            setItems(items => [
                 ...items,
                 {
                     id: items.length > 0 ? items[items.length - 1].id + 1 : 0,
