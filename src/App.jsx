@@ -9,10 +9,12 @@ function App() {
     { id: 12, message: "Second Todo", completed: true }
   ])
   return (
-    <>
+    <main>
+      {/* component with input and add button */}
       <Input setItems={setItems}></Input>
+      {/* component container for all list items */}
       <ListContainer items={items} setItems={setItems}></ListContainer>
-    </>
+    </main>
   )
 }
 

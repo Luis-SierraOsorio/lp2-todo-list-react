@@ -3,19 +3,25 @@ import Button from '../../button/Button'
 import { useState } from 'react'
 
 export default function ListItem({ item, setItems }) {
+    // state to keep track if the user wants to edit their task
     const [isEditting, setIsEditting] = useState(false)
+    // state to keep track of input when user decides to edit
     const [input, setInput] = useState(item.message)
 
+    // function to handle the deletion of a task
     function handleDelete() {
+        // filtering through items to exclude the item with matching id
         setItems(prev => prev.filter(
             i => item.id !== i.id
         ))
     }
 
+    // function to swap state of isEditting
     function handleEdit() {
         setIsEditting(prev => !prev)
     }
 
+    // function to handle the saving of editted item, using map.
     function handleSave() {
         setItems(items => items.map(i => {
             if (i.id === item.id) {
@@ -32,10 +38,13 @@ export default function ListItem({ item, setItems }) {
         handleEdit()
     }
 
+    // function handling the cancelation of edit
     function handleCancel() {
         setInput(item.message)
         handleEdit();
     }
+
+
 
     return (
         <>
@@ -46,7 +55,7 @@ export default function ListItem({ item, setItems }) {
                 {/* save button */}
                 {!isEditting && <Button><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 50 50">
                     <path d="M 42.875 8.625 C 42.84375 8.632813 42.8125 8.644531 42.78125 8.65625 C 42.519531 8.722656 42.292969 8.890625 42.15625 9.125 L 21.71875 40.8125 L 7.65625 28.125 C 7.410156 27.8125 7 27.675781 6.613281 27.777344 C 6.226563 27.878906 5.941406 28.203125 5.882813 28.597656 C 5.824219 28.992188 6.003906 29.382813 6.34375 29.59375 L 21.25 43.09375 C 21.46875 43.285156 21.761719 43.371094 22.050781 43.328125 C 22.339844 43.285156 22.59375 43.121094 22.75 42.875 L 43.84375 10.1875 C 44.074219 9.859375 44.085938 9.425781 43.875 9.085938 C 43.664063 8.746094 43.269531 8.566406 42.875 8.625 Z"></path>
-                </svg></Button> }
+                </svg></Button>}
                 {/* edit/save button */}
                 <Button fn={isEditting ? handleSave : handleEdit}> {isEditting ? <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 48 48">
                     <path d="M 15 3 C 12.250484 3 10 5.2504839 10 8 L 10 45 A 1.0001 1.0001 0 0 0 11.609375 45.792969 L 25.904297 34.796875 A 1.0006638 1.0006638 0 1 0 24.683594 33.210938 L 12 42.96875 L 12 8 C 12 6.3315161 13.331516 5 15 5 L 33 5 C 34.668484 5 36 6.3315161 36 8 L 36 42.96875 L 27.681641 36.570312 A 1.0001 1.0001 0 1 0 26.462891 38.15625 L 36.390625 45.792969 A 1.0001 1.0001 0 0 0 38 45 L 38 8 C 38 5.2504839 35.749516 3 33 3 L 15 3 z"></path>
