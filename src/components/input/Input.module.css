@@ -1,0 +1,38 @@
+.container {
+    padding: 1.5rem;
+    background-color: rgb(200, 193, 193);
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    /* box-sizing: border-box; */
+
+}
+
+.inputTextBox {
+    padding-right: 15rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+}
+
+.inputTextBox:focus {
+    border: none;
+    outline: none;
+}
+
+.add-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+}
+
+.add-button:hover {
+    cursor: pointer;
+}
