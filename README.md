@@ -1,6 +1,12 @@
 # lp-2-todo-list-react
 
-# todo list done in react to learn the basics
+## Description
+### Simple todo app meant to teach me the basics of React
 
-## IGNORE THE BAD COLOR SCHEMES, I HAVE NO IDEA WHAT COLORS LOOK NICE :D
-## I WAS JUST PRACTICING WITH REACT, CSS, AND LAYOUTS
+## Disclaimer
+### Please forgive my UI Design, this was not meant to look pretty
+
+## Instructions
+### 1. Download/clone code
+### 2. run 'npm i on console'
+### 3. run 'npm run dev'
